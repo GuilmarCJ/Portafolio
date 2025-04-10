@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
         body {
             background-color: #1a1a1a;
@@ -43,6 +44,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
                     <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
@@ -53,10 +55,21 @@
     <!-- Hero Section -->
     <header class="text-center py-5 animate__animated animate__fadeIn">
         <div class="container">
-            <h1 class="display-4">¡Hola! Soy Guilmar Smith 🚀</h1>
+            <h1 class="display-4"><span id="typed"></span></h1>
             <p class="lead">Desarrollador de Software | Apasionado por la programación</p>
         </div>
     </header>
+
+    <!-- Sobre mí -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Sobre mí</h2>
+            <p class="lead text-center">
+                Soy Guilmar, estudiante de Computación e Informática con experiencia en desarrollo web full-stack, 
+                bases de datos, APIs y frameworks modernos. Apasionado por aprender y crear soluciones innovadoras.
+            </p>
+        </div>
+    </section>
 
     <!-- Proyectos Section -->
     <section id="proyectos" class="py-5">
@@ -142,11 +155,17 @@
         <div class="container text-center">
             <h2 class="mb-4">¡Contáctame!</h2>
             <p>¿Tienes algún proyecto interesante? ¡Hablemos!</p>
-            <a href="mailto:guilmarscj@gmail.com" class="btn btn-outline-light">Envíame un correo</a>
+            <form action="https://formsubmit.co/guilmarscj@gmail.com" method="POST" class="mx-auto" style="max-width: 500px;">
+                <input type="text" name="name" class="form-control mb-3" placeholder="Tu nombre" required>
+                <input type="email" name="email" class="form-control mb-3" placeholder="Tu correo" required>
+                <textarea name="message" class="form-control mb-3" rows="4" placeholder="Tu mensaje" required></textarea>
+                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </form>
         </div>
     </section>
 
-    <!-- Footer -->
+
+   <!-- Footer -->
     <footer class="footer py-3">
         <p>© 2025 - Creado en agradecimiento a Katherine, futura compañera de vida ❤️</p>
     </footer>
@@ -155,6 +174,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         AOS.init();
+        new Typed("#typed", {
+            strings: ["¡Hola! Soy Guilmar Smith 🚀", "Desarrollador de Software", "Apasionado por la programación"],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
+        });
     </script>
 </body>
 </html>
