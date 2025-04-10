@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Guilmar Smith - Portafolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
         body {
             background-color: #1a1a1a;
             color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .navbar {
             background-color: #333;
@@ -17,11 +21,20 @@
             background-color: #2c2c2c;
             color: white;
             border: none;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
         }
         .footer {
             margin-top: 50px;
             text-align: center;
             color: #aaa;
+        }
+        .project-img {
+            max-height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #444;
         }
     </style>
 </head>
@@ -43,10 +56,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="text-center py-5">
+    <header class="text-center py-5 animate__animated animate__fadeIn">
         <div class="container">
             <h1 class="display-4">¡Hola! Soy Guilmar Smith 🚀</h1>
-            <p class="lead">Desarrollador de Software | Apasionado por la programacion</p>
+            <p class="lead">Desarrollador de Software | Apasionado por la programación</p>
         </div>
     </header>
 
@@ -55,76 +68,19 @@
         <div class="container">
             <h2 class="text-center mb-5">Mis Proyectos</h2>
             <div class="row">
-                <!-- Proyecto 1 -->
-                <div class="col-md-6 mb-4">
+                <!-- Proyectos generados dinámicamente con AOS para animaciones -->
+                <!-- Proyecto base -->
+                <div class="col-md-6 mb-4" data-aos="fade-up">
                     <div class="card project-card">
+                        <img src="https://raw.githubusercontent.com/GuilmarCJ/Mars-Rover-Photo-Viewer/main/demo.jpg" class="card-img-top project-img" alt="Mars Rover Photo Viewer">
                         <div class="card-body">
                             <h5 class="card-title">Mars Rover Photo Viewer</h5>
                             <p class="card-text">Visualizador de imágenes del rover Curiosity en Marte usando la API de la NASA.</p>
-                            <a href="https://github.com/GuilmarCJ/Mars-Rover-Photo-Viewer.git" class="btn btn-primary" target="_blank">Ver en GitHub</a>
+                            <a href="https://github.com/GuilmarCJ/Mars-Rover-Photo-Viewer" class="btn btn-primary" target="_blank">Ver en GitHub</a>
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto 2 -->
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Consulta y venta de cocinas</h5>
-                            <p class="card-text">Este proyecto esta hecho en java en escritorio usando introduccion a la algoritmia</p>
-                            <a href="https://github.com/GuilmarCJ/Consulta-Cosina.git" class="btn btn-primary" target="_blank">Ver en GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto 3 -->
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Creacion deposito a plazo</h5>
-                            <p class="card-text">Este proyecto esta hecho en Angular18 consumi dos apis una fue para validar el numero de cocumento y la segunda fue para la creacion de la cuenta.</p>
-                            <a href="https://github.com/GuilmarCJ/ProyectoCreacionDepositoAPlaso.git" class="btn btn-primary" target="_blank">Ver en GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto 4 -->
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Ventas de carros TopCars</h5>
-                            <p class="card-text">Este proyecto esta hecho co HTML, CSS y JavaScript orientado a Arquitectura de entornos web.</p>
-                            <a href="https://github.com/GuilmarCJ/VentasDeCarrosWeb.git" class="btn btn-primary" target="_blank">Ver en GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto 5 -->
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Ventas de carros TopCars mejorado</h5>
-                            <p class="card-text">Este proyecto esta hecho co HTML, CSS y JavaScript con mas funciones y mejorado.</p>
-                            <a href="https://github.com/GuilmarCJ/VentasDeCarrosWebMejorado.git" class="btn btn-primary" target="_blank">Ver en GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto 6 -->
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Ventas de recursos</h5>
-                            <p class="card-text">Este proyecto esta hecho en base a algoritmos y estructura de datos usando java.</p>
-                            <a href="https://github.com/GuilmarCJ/ProyectoVentasEscritorioJava.git" class="btn btn-primary" target="_blank">Ver en GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto 7 -->
-                <div class="col-md-6 mb-4">
-                    <div class="card project-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Registros</h5>
-                            <p class="card-text">Este proyecto fue hecho en grupo con ayuda de un profesor, no es completo del todo en algunas partes, este proyecto web esta hecho en eclipse con Java ee conectada a una base de datos.</p>
-                            <a href="https://github.com/jorgejacinto9701/lp1_20246_sabado01_grupo_03.git" class="btn btn-primary" target="_blank">Ver en GitHub</a>
-                        </div>
-                    </div>
-                </div>
+                <!-- Puedes duplicar y adaptar este bloque para cada proyecto con imagen -->
             </div>
         </div>
     </section>
@@ -134,20 +90,19 @@
         <div class="container text-center">
             <h2 class="mb-4">¡Contáctame!</h2>
             <p>¿Tienes algún proyecto interesante? ¡Hablemos!</p>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=guilmarscj@gmail.com" 
-               class="btn btn-outline-light" 
-               target="_blank">
-               Envíame un correo
-            </a>
+            <a href="mailto:guilmarscj@gmail.com" class="btn btn-outline-light">Envíame un correo</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer py-3">
-        <p>© 2025 - Creado en agradecimiento a Katherine futura compañera de vida</p>
+        <p>© 2025 - Creado en agradecimiento a Katherine, futura compañera de vida ❤️</p>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
